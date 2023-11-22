@@ -14,4 +14,3 @@ showButton.addEventListener('click', (event) => {
   container.append(fragment);
   showCard.remove();
 });
-
