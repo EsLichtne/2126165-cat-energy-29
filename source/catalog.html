@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script defer src="js/catalog.js"></script>
+  <script defer src="js/modal.js" type="module"></script>
 </head>
 
 <body class="page__body">
@@ -92,7 +94,7 @@
                 <dd class="card__amount">700&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -133,7 +135,7 @@
                 <dd class="card__amount">1000&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -174,7 +176,7 @@
                 <dd class="card__amount">700&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -215,7 +217,7 @@
                 <dd class="card__amount">1000&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -256,7 +258,7 @@
                 <dd class="card__amount">400&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -297,7 +299,7 @@
                 <dd class="card__amount">700&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="card">
             <a class="card__image-link" href="#">
@@ -338,7 +340,7 @@
                 <dd class="card__amount">500&nbsp;₽</dd>
               </div>
             </dl>
-            <button class="card__button button button--primary" type="button">Заказать</button>
+            <button class="card__button button button--primary order-button" type="button">Заказать</button>
           </li>
           <li class="showing">
             <p class="showing__title">Показать еще 100500 товаров</p>
@@ -363,7 +365,7 @@
                 <dt class="visually-hidden">Цена.</dt>
                 <dd class="extras__price">200&nbsp;₽</dd>
               </dl>
-              <button class="extras__button button button--primary" type="button">Заказать</button>
+              <button class="extras__button button button--primary order-button" type="button">Заказать</button>
             </li>
             <li class="extras__item">
               <h3 class="extras__caption">Питьевая вода</h3>
@@ -373,7 +375,7 @@
                 <dt class="visually-hidden">Цена.</dt>
                 <dd class="extras__price">50&nbsp;₽</dd>
               </dl>
-              <button class="extras__button button button--primary" type="button">Заказать</button>
+              <button class="extras__button button button--primary order-button" type="button">Заказать</button>
             </li>
             <li class="extras__item">
               <h3 class="extras__caption">Молоко</h3>
@@ -383,7 +385,7 @@
                 <dt class="visually-hidden">Цена.</dt>
                 <dd class="extras__price">100&nbsp;₽</dd>
               </dl>
-              <button class="extras__button button button--primary" type="button">Заказать</button>
+              <button class="extras__button button button--primary order-button" type="button">Заказать</button>
             </li>
             <li class="extras__item">
               <h3 class="extras__caption">Витамины</h3>
@@ -393,7 +395,7 @@
                 <dt class="visually-hidden">Цена.</dt>
                 <dd class="extras__price">300&nbsp;₽</dd>
               </dl>
-              <button class="extras__button button button--primary" type="button">Заказать</button>
+              <button class="extras__button button button--primary order-button" type="button">Заказать</button>
             </li>
           </ul>
           <div class="promotion">
@@ -465,6 +467,24 @@
       </a>
     </div>
   </footer>
+  <section class="modal modal--hidden">
+    <div class="modal__wrapper">
+      <h2 class="modal__title title">Добавить в корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal__field-wrapper">
+          <label class="modal__label" for="count">Укажите количество</label>
+          <input class="modal__input form-control input" name="count" id="count" type="number" required
+            data-pristine-required-message="Поле обязательно к заполнению">
+        </div>
+        <button class="modal__button button button--primary" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+  <template id="popup-message">
+    <section class="popup-message">
+      <p class="popup-message__text">Товар добавлен в корзину</p>
+    </section>
+  </template>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f0efd25a-59f7-45f0-a011-7aea5b12191f&lang=ru_RU"
     type="text/javascript"></script>
   <script src="js/map.js"></script>

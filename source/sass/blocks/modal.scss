@@ -1,0 +1,126 @@
+@use "../common/variables.scss";
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+  width: min(60rem, 480px);
+  padding: min(5rem, 70px) min(4.5rem, 65px);
+  margin-top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: variables.$text-primary;
+
+  background-color: #ffffff;
+
+  @media (min-width: variables.$tablet) {
+    width: clamp(600px, 60rem, 800px);
+    padding: clamp(50px, 5rem, 67px) clamp(100px, 10rem, 133px);
+    margin-top: 250px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 300px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: min(2rem, 30px);
+  font-size: min(2.8rem, 42px);
+
+  @media (min-width: variables.$tablet) {
+    margin-bottom: clamp(40px, 4rem, 50px);
+    font-size: clamp(35px, 3.5rem, 46px);
+  }
+}
+
+.modal__form {
+  width: 100%;
+}
+
+.modal__field-wrapper {
+  position: relative;
+  display: grid;
+  gap: min(2rem, 30px);
+  margin-bottom: min(3rem, 40px);
+
+  @media (min-width: variables.$tablet) {
+    gap: clamp(20px, 2rem, 30px);
+    margin-bottom: clamp(30px, 3rem, 40px);
+  }
+}
+
+.modal__label {
+  font-size: min(1.6rem, 24px);
+  line-height: min(1.8rem, 27px);
+  text-transform: uppercase;
+  color: variables.$text-secondary;
+
+  @media (min-width: variables.$tablet) {
+    font-size: clamp(18px, 2rem, 23px);
+    line-height: clamp(18px, 2rem, 23px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    font-size: clamp(16px, 2rem, 23px);
+    line-height: clamp(16px, 2rem, 23px);
+  }
+}
+
+.modal__button {
+  width: 100%;
+  padding: min(1.5rem, 20px) min(4.5rem, 60px);
+
+  @media (min-width: variables.$tablet) {
+    padding: clamp(15px, 1.5rem, 25px) min(4.5rem, 71px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding: clamp(15px, 1.5rem, 25px) clamp(38px, 4.5rem, 71px);
+  }
+}
+
+.modal__error {
+  position: absolute;
+  bottom: max(-2rem, -30px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: min(1.2rem, 16px);
+  line-height: min(1.6rem, 24px);
+  color: variables.$color-error;
+
+  @media (min-width: variables.$tablet) {
+    bottom: clamp(-30px, -2rem, -20px);
+    font-size: clamp(14px, 1.6rem, 20px);
+    line-height: clamp(14px, 1.6rem, 20px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    font-size: clamp(14px, 1.8rem, 22px);
+    line-height: clamp(14px, 2rem, 22px);
+  }
+}
