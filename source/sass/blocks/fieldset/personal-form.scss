@@ -10,8 +10,13 @@
 
 .personal-form__list {
   gap: min(1.4rem, 20px);
+  gap: min(3rem, 38px);
 
   @media (min-width: variables.$tablet) {
-    gap: clamp(20px, 2rem, 31px);
+    gap: clamp(20px, 3.5rem, 42px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    gap: clamp(20px, 3.8rem, 44px);
   }
 }

@@ -1,0 +1,62 @@
+@use "../common/variables.scss";
+
+.success {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.success__inner {
+  position: relative;
+  width: min(60rem, 480px);
+  padding: min(5rem, 75px) min(2rem, 30px);
+  margin-top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: variables.$text-primary;
+
+  background-color: #ffffff;
+
+  @media (min-width: variables.$tablet) {
+    width: clamp(600px, 60rem, 800px);
+    padding: clamp(50px, 5rem, 66px) clamp(20px, 2rem, 27px);
+    margin-top: 250px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 300px;
+  }
+}
+
+.success__title {
+  margin: 0;
+  margin-bottom: min(4rem, 60px);
+  font-size: min(3.5rem, 38px);
+
+  @media (min-width: variables.$tablet) {
+    margin-bottom: clamp(40px, 4rem, 55px);
+    font-size: clamp(35px, 3.5rem, 46px);
+  }
+}
+
+.success__button {
+  padding: min(1rem, 15px) min(4rem, 60px);
+
+  @media (min-width: variables.$tablet) {
+    padding: clamp(10px, 1rem, 13px) clamp(40px, 4rem, 53px);
+  }
+}

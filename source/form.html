@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script defer src="js/upload.js" type="module"></script>
 </head>
 
 <body class="page__body">
@@ -63,21 +64,22 @@
                   <p class="label-field">
                     <label class="program-selection__label" for="cat-name">Имя:*</label>
                     <input class="program-selection__input form-control input" type="text" name="cat-name" id="cat-name"
-                      placeholder="Барсик" required>
+                      placeholder="Барсик" required data-pristine-required-message="Укажите имя питомца" pattern="/[а-яё]+$/i" data-pristine-pattern-message="Укажите имя питомца">
                   </p>
                 </li>
                 <li class="program-selection__item">
                   <p class="label-field">
                     <label class="program-selection__label" for="cat-weight">Вес&nbsp;(кг):*</label>
                     <input class="program-selection__input form-control input" type="text" name="cat-weight"
-                      id="cat-weight" placeholder="7" required>
+                      id="cat-weight" placeholder="7" required data-pristine-required-message="Укажите вес питомца"
+                      pattern="/[0-9]+$/" data-pristine-pattern-message="Укажите числовое значение">
                   </p>
                 </li>
                 <li class="program-selection__item">
                   <p class="label-field">
                     <label class="program-selection__label" for="cat-age">Возраст&nbsp;(лет):</label>
                     <input class="program-selection__input form-control input" type="text" name="cat-age" id="cat-age"
-                      placeholder="7">
+                      placeholder="7" pattern="/[0-9]+$/" data-pristine-pattern-message="Укажите числовое значение">
                   </p>
                 </li>
               </ul>
@@ -120,17 +122,17 @@
                   <p class="label-field">
                     <label class="program-selection__label" for="email">E&#8209;mail:*</label>
                     <input class="program-selection__input form-control input" type="email" name="email" id="email"
-                      placeholder="kuklachev@gmail.com" required>
+                      placeholder="kuklachev@gmail.com" required data-pristine-required-message="Укажите e-mail" data-pristine-email-message="Укажите валидный адрес">
                     <svg class="program-selection__field-icon" width="20" height="20" aria-hidden="true">
                       <use href="img/sprite.svg#email"></use>
                     </svg>
                   </p>
                 </li>
-                <li>
+                <li class="program-selection__item">
                   <p class="label-field">
                     <label class="program-selection__label" for="phone">Телефон:*</label>
                     <input class="program-selection__input form-control input" type="tel" name="phone" id="phone"
-                      placeholder="8 (960) 900-60-90" required>
+                      placeholder="8 (960) 900-60-90" required data-pristine-required-message="Укажите телефон">
                     <svg class="program-selection__field-icon" width="20" height="20" aria-hidden="true">
                       <use href="img/sprite.svg#phone"></use>
                     </svg>
@@ -252,6 +254,14 @@
       </a>
     </div>
   </footer>
+  <template id="success">
+    <section class="success">
+      <div class="success__inner">
+        <h2 class="success__title title title--secondary">Данные формы успешно отправлены</h2>
+        <button type="button" class="success__button button button--primary">Круто!</button>
+      </div>
+    </section>
+  </template>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f0efd25a-59f7-45f0-a011-7aea5b12191f&lang=ru_RU"
     type="text/javascript"></script>
   <script src="js/map.js"></script>

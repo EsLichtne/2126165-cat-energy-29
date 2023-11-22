@@ -301,3 +301,23 @@
     margin-bottom: clamp(41px, 4.1rem, 48px);
   }
 }
+
+.program-selection__error {
+  position: absolute;
+  padding-top: min(0.6rem, 9px);
+  font-size: min(1.2rem, 16px);
+  line-height: min(1.6rem, 24px);
+  color: rgb(185, 105, 105);
+
+  @media (min-width: variables.$tablet) {
+    padding-top: min(0.8rem, 10px);
+    font-size: clamp(14px, 1.6rem, 20px);
+    line-height: clamp(14px, 1.6rem, 20px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-top: min(0.8rem, 12px);
+    font-size: clamp(14px, 1.8rem, 22px);
+    line-height: clamp(14px, 2rem, 22px);
+  }
+}
