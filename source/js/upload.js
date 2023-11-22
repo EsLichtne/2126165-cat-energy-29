@@ -2,7 +2,7 @@ import '../vendor/pristine/pristine.min.js';
 
 const form = document.querySelector('.program-selection__form');
 const submitButton = document.querySelector('.program-selection__button');
-const message = document.querySelector('#success').content.querySelector('.success').cloneNode(true);
+const message = document.querySelector('#success').content.querySelector('.message').cloneNode(true);
 
 const pristine = new Pristine(form, {
   classTo: 'program-selection__item',
@@ -40,7 +40,7 @@ const clearField = () => {
 };
 
 const onMessageClick = (event) => {
-  if (event.target === message.querySelector('.success__button') || event.target === message) {
+  if (event.target === message.querySelector('.message__button') || event.target === message) {
     setSubmitDisabled(false);
     message.remove();
     clearField();

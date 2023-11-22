@@ -1,6 +1,6 @@
 @use "../common/variables.scss";
 
-.success {
+.message {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.success__inner {
+.message__inner {
   position: relative;
   width: min(60rem, 480px);
   padding: min(5rem, 75px) min(2rem, 30px);
@@ -42,7 +42,7 @@
   }
 }
 
-.success__title {
+.message__title {
   margin: 0;
   margin-bottom: min(4rem, 60px);
   font-size: min(3.5rem, 38px);
@@ -53,7 +53,7 @@
   }
 }
 
-.success__button {
+.message__button {
   padding: min(1rem, 15px) min(4rem, 60px);
 
   @media (min-width: variables.$tablet) {
