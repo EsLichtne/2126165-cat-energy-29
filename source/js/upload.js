@@ -19,7 +19,9 @@ submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   if (pristine.validate()) {
     setSubmitDisabled(true);
-    document.body.appendChild(message);
+    setTimeout(() => {
+      document.body.appendChild(message);
+    }, 2000);
   }
 });
 
