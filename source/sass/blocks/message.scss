@@ -53,10 +53,36 @@
   }
 }
 
-.message__button {
-  padding: min(1rem, 15px) min(4rem, 60px);
+.message__text {
+  margin: 0;
+  margin-bottom: min(4rem, 60px);
+  font-size: min(1.4rem, 24px);
+  line-height: min(1.8rem, 27px);
+  text-transform: uppercase;
+  color: variables.$text-secondary;
 
   @media (min-width: variables.$tablet) {
-    padding: clamp(10px, 1rem, 13px) clamp(40px, 4rem, 53px);
+    font-size: clamp(16px, 1.6rem, 20px);
+    line-height: clamp(18px, 1.8rem, 22px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    font-size: clamp(16px, 2rem, 23px);
+    line-height: clamp(16px, 2rem, 23px);
+  }
+}
+
+.message__button-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0;
+}
+
+.message__button {
+  padding: min(1rem, 15px) min(2rem, 30px);
+
+  @media (min-width: variables.$tablet) {
+    padding: clamp(15px, 1.5rem, 20px) clamp(40px, 4rem, 53px);
   }
 }
