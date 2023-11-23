@@ -26,6 +26,7 @@ const clearForm = () => {
 const hideModal = () => {
   modal.classList.add('modal--hidden');
   clearForm();
+  pristine.reset();
   document.body.append(message);
 };
 
