@@ -120,7 +120,7 @@
   outline: 1px solid variables.$color-error;
 }
 
-.program-selection__item--error .program-selection__input+.program-selection__field-icon {
+.program-selection__item--error .program-selection__input + .program-selection__field-icon {
   color: variables.$color-error;
 }
 
@@ -133,7 +133,7 @@
   }
 }
 
-.program-selection__input:focus+.program-selection__field-icon {
+.program-selection__input:focus + .program-selection__field-icon {
   color: variables.$color-primary;
 }
 
