@@ -475,7 +475,9 @@
         <div class="modal__field-wrapper">
           <label class="modal__label" for="count">Укажите количество</label>
           <input class="modal__input form-control input" name="count" id="count" type="number" required
-            data-pristine-required-message="Поле обязательно к заполнению">
+            data-pristine-required-message="Поле обязательно к заполнению" min="1"
+            data-pristine-min-message="Можно добавить не менее одного товара" max="999"
+            data-pristine-max-message="Можно добавить не более 999 товаров">
         </div>
         <button class="modal__button button button--primary" type="submit">Добавить</button>
       </form>
