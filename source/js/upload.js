@@ -6,6 +6,7 @@ const message = document.querySelector('#success').content.querySelector('.messa
 
 const pristine = new Pristine(form, {
   classTo: 'program-selection__item',
+  errorClass: 'program-selection__item--error',
   errorTextParent: 'program-selection__item',
   errorTextClass: 'program-selection__error'
 });

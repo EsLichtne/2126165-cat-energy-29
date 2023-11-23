@@ -9,6 +9,7 @@ const message = document.querySelector('#popup-message').content.querySelector('
 
 const pristine = new Pristine(form, {
   classTo: 'modal__field-wrapper',
+  errorClass: 'modal__field-wrapper--error',
   errorTextParent: 'modal__field-wrapper',
   errorTextClass: 'modal__error'
 });

@@ -73,6 +73,11 @@
   }
 }
 
+.modal__field-wrapper--error .modal__input {
+  border-color: variables.$color-error;
+  outline: 1px solid variables.$color-error;
+}
+
 .modal__label {
   font-size: min(1.6rem, 24px);
   line-height: min(1.8rem, 27px);

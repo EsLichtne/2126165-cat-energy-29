@@ -115,6 +115,15 @@
   border-color: #bababa;
 }
 
+.program-selection__item--error .program-selection__input {
+  border-color: variables.$color-error;
+  outline: 1px solid variables.$color-error;
+}
+
+.program-selection__item--error .program-selection__input+.program-selection__field-icon {
+  color: variables.$color-error;
+}
+
 .program-selection__input {
   width: 100%;
   max-height: 4.5rem;
@@ -122,6 +131,10 @@
   @media (min-width: variables.$tablet) {
     max-height: max(52px, 5.2rem);
   }
+}
+
+.program-selection__input:focus+.program-selection__field-icon {
+  color: variables.$color-primary;
 }
 
 .program-selection__field-icon {
@@ -139,14 +152,6 @@
   @media (min-width: variables.$desktop) {
     right: clamp(16px, 1.6rem, 22px);
   }
-}
-
-.program-selection__input:focus + .program-selection__field-icon {
-  color: variables.$color-primary;
-}
-
-.program-selection__input--error + .program-selection__field-icon {
-  color: variables.$color-error;
 }
 
 .program-selection__textarea {
