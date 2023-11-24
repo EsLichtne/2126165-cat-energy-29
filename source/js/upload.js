@@ -13,7 +13,7 @@ const pristine = new Pristine(form, {
 
 const setSubmitDisabled = (flag) => {
   submitButton.disabled = flag;
-  submitButton.textContent = flag ? 'Отправляю...' : 'Отправить заявку';
+  submitButton.textContent = flag ? 'Отправляем...' : 'Отправить заявку';
 };
 
 submitButton.addEventListener('click', (event) => {
