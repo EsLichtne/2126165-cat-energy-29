@@ -40,6 +40,8 @@
   width: min(14rem, 182px);
   height: min(10.7rem, 130px);
 
+  transition: transform 0.5s;
+
   @media (min-width: variables.$tablet) {
     grid-column: 1 / -1;
     width: min(20rem, 245px);
@@ -54,6 +56,13 @@
     height: min(21rem, 252px);
     margin-top: -72px;
     margin-bottom: 13px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.5) translateY(-10%);
+    transition: transform 0.5s;
   }
 }
 
