@@ -136,7 +136,9 @@
                   <p class="label-field">
                     <label class="program-selection__label" for="phone">Телефон:*</label>
                     <input class="program-selection__input form-control input" type="tel" name="phone" id="phone"
-                      placeholder="8 (960) 900-60-90" required data-pristine-required-message="Укажите телефон">
+                      placeholder="8 (960) 900-60-90" required data-pristine-required-message="Укажите телефон"
+                      pattern="/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/"
+                      data-pristine-pattern-message="Укажите валидный номер">
                     <svg class="program-selection__field-icon" width="20" height="20" aria-hidden="true">
                       <use href="img/sprite.svg#phone"></use>
                     </svg>
