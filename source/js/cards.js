@@ -1,16 +1,38 @@
+import {renderOrder} from './modal.js';
+
 const container = document.querySelector('.cards');
+const template = document.querySelector('.card').cloneNode(true);
 const cards = document.querySelectorAll('.card');
-const showCard = document.querySelector('.showing');
 const showButton = document.querySelector('.showing__button');
+const showCard = document.querySelector('.showing');
+const imageLinks = document.querySelectorAll('.card__image-link');
 
-const fragment = document.createDocumentFragment();
-
-showButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  cards.forEach((card) => {
-    const cloneCard = card.cloneNode(true);
-    fragment.append(cloneCard);
+const renderLinks = () => {
+  imageLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
   });
-  container.append(fragment);
-  showCard.remove();
-});
+};
+
+const renderCards = (cards, step = 3) => {
+  const currentCards = [...cards];
+
+  const onShowButtonClick = (event) => {
+    event.preventDefault();
+
+    container.append(...currentCards.splice(0, step));
+    showCard.classList.toggle('hidden', !currentCards.length);
+    container.insertAdjacentElement('beforeend', showCard);
+
+    renderLinks();
+    renderOrder();
+  };
+
+  container.replaceChildren();
+
+  showButton.addEventListener('click', onShowButtonClick);
+  showButton.click();
+}
+
+renderCards(cards);

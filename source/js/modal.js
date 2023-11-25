@@ -41,7 +41,7 @@ const onDocumentKeydown = (event) => {
 const onModalClick = (event) => {
   event.preventDefault();
 
-  if (pristine.validate() && event.target === modalButton) {
+  if (pristine.validate() && event.target === modalButton || pristine.validate() && event.target === modal) {
     hideModal();
     document.body.append(message);
     setTimeout(() => {
@@ -55,5 +55,9 @@ const onModalClick = (event) => {
   }
 };
 
-modal.addEventListener('click', onModalClick);
-document.addEventListener('keydown', onDocumentKeydown);
+const renderOrder = () => {
+  modal.addEventListener('click', onModalClick);
+  document.addEventListener('keydown', onDocumentKeydown);
+}
+
+export {renderOrder};
