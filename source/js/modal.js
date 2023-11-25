@@ -16,7 +16,7 @@ const pristine = new Pristine(form, {
 
 orderButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    modal.classList.remove('modal--hidden');
+    modal.classList.remove('hidden');
   });
 });
 
