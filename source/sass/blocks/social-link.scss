@@ -5,6 +5,7 @@
   width: clamp(28px, 2.8rem, 35px);
   height: clamp(22px, 2.2rem, 28px);
   background-color: #666666;
+  transition: background-color 0.3s linear, opacity 0.3s linear;
 
   &--vk {
     mask: url("../img/sprite.svg#vk") no-repeat center;

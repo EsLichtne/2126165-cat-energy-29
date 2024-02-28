@@ -127,6 +127,7 @@
 .program-selection__input {
   width: 100%;
   max-height: 4.5rem;
+  transition: border 0.3s linear, outline 0.3s linear;
 
   @media (min-width: variables.$tablet) {
     max-height: max(52px, 5.2rem);
@@ -144,6 +145,7 @@
   transform: translateY(-50%);
   width: clamp(20px, 2rem, 25px);
   height: clamp(20px, 2rem, 25px);
+  transition: color 0.3s linear;
 
   @media (min-width: variables.$tablet) {
     right: clamp(14px, 1.4rem, 20px);

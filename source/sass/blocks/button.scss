@@ -12,6 +12,7 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  transition: color 0.3s linear, background-color 0.3s linear;
 
   @media (min-width: variables.$tablet) {
     font-size: clamp(18px, 2rem, 24px);

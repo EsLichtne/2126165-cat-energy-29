@@ -2,6 +2,7 @@
 
 .input {
   border: 1px solid #e7e7e7;
+  transition: border 0.3s linear, outline 0.3s linear;
 
   &:hover {
     border-color: #cdcdcd;

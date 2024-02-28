@@ -2,6 +2,7 @@
 
 .header-logo {
   text-decoration: none;
+  transition: opacity 0.3s linear;
 
   @media (max-width: variables.$mobile) {
     width: min(3.3rem, 43px);
