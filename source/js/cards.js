@@ -1,7 +1,6 @@
 import {renderOrder} from './modal.js';
 
 const container = document.querySelector('.cards');
-const template = document.querySelector('.card').cloneNode(true);
 const cards = document.querySelectorAll('.card');
 const showButton = document.querySelector('.showing__button');
 const showCard = document.querySelector('.showing');
